@@ -1,0 +1,83 @@
+---
+import "@fontsource/poppins";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  return [
+    {
+      params: { projects: "cowrywise" },
+      props: {
+        name: "Cowrywise",
+        desc: "The project cowrywise web application was built with React. It is a platform that allows individuals to plan, save, and invest money, offering access to mutual funds and other investment options, with a focus on making financial management easier and more accessible. ",
+        live: "https://c-wise.vercel.app/",
+        code: "https://github.com/Ebunoluwa1/c-wise",
+        experience:
+          "The application was built to increase my Speed & Efficiency in structuring a project, Writing clean and reusable code, Debugging issues quickly, and strengthening JavaScript & Framework Knowledge and also enhancing CSS and UI/UX Skills. Overall, it was a great introductory project as i replicated the original website",
+      },
+    },
+    {
+      params: { projects: "followup-website" },
+      props: {
+        name: "A followup-website",
+        desc: "The project follow-up web application was built with React, Tailwind CSS, and a few other libraries. It serves as a structured system for spiritual growth, discipleship, and first-time visitors. The application helps track and follow up with new converts while maintaining essential records. Additionally, it provides courses, learning resources, and quizzes for new converts.",
+        live: "https://rcf-followup-website-pi.vercel.app/",
+        code: "",
+        experience:
+          "This project expanded my knowledge in various ways, including improving my API integration skills, problem-solving abilities, and debugging techniques. It also gave me hands-on experience in real-world team collaboration—working alongside backend developers and my fellow frontend developer.",
+      },
+    },
+    {
+      params: { projects: "justBeans" },
+      props: {
+        name: "JustBeans e-commerce website",
+        desc: "JustBeans is an e-commerce website that focuses on selling black-eye, chickpea, and lentil in powdered and molded formats with payment options like Paystack. Some of the Core Features of JustBeans-User Accounts, Product Listings, Payment Integration.",
+        live: "https://jbeans-lbwe.vercel.app/",
+        code: "https://github.com/Ebunoluwa1/jbeans",
+        experience: [
+          "This project enhanced my skills in React and Supabase, improved my debugging and problem-solving abilities, and boosted my confidence in handling real-world projects.",
+          "I worked on implementing user authentication, payment integration with Paystack, and database management using Supabase.",
+          "Through this experience, I learned how to handle error management effectively, optimize API calls for better performance, and improve user experience by implementing features like loading states, input validation, and real-time updates.",
+          "Debugging authentication and payment-related issues also sharpened my ability to analyze and resolve technical problems efficiently.",
+          "Additionally, working on JustBeans allowed me to think more critically about scalability and how to structure a frontend application for long-term maintainability.",
+        ],
+        // experience:
+        //   "This project enhanced my skills in React and Supabase, improved my debugging and problem-solving abilities, and boosted my confidence in handling real-world projects. I worked on implementing user authentication, payment integration with Paystack, and database management using Supabase.Through this experience, I learned how to handle error management effectively, optimize API calls for better performance, and improve user experience by implementing features like loading states, input validation, and real-time updates. Debugging authentication and payment-related issues also sharpened my ability to analyze and resolve technical problems efficiently.Additionally, working on JustBeans allowed me to think more critically about scalability and how to structure a frontend application for long-term maintainability",
+      },
+    },
+  ];
+}
+
+const { projects } = Astro.params;
+const { name, desc, experience, live, code } = Astro.props;
+---
+
+<Layout>
+  <div class="mx-auto w-3/6">
+    <img
+      src=`/assets/${projects}.png`
+      width="600"
+      height="600"
+      class="rounded"
+    />
+    <h1 class="font-bold mt-4">Project: {name}</h1>
+    <p>{desc}</p>
+    <p><span class="font-bold">EXPERIENCE:</span> {experience}</p>
+    <section class="flex gap-4 mt-2">
+      <a
+        href={live}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="rounded p-2 px-8 bg-amber-100 text-slate-900 shadow-lg hover:opacity-50"
+        >Live
+      </a>
+      <a
+        href={code}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="rounded p-2 px-8 hover:bg-amber-100 hover:text-slate-900 shadow-lg"
+      >
+        Code
+      </a>
+    </section>
+  </div>
+</Layout>

@@ -1,0 +1,21 @@
+I had wanted to get this portfolio done , since 2021/22 .
+It took me so long but here we are today in February 2025.
+
+PORTFOLIO
+ For this portfolio , i am implementing AstroJS for the first time 
+ becasue of it a all in one web framework for building content-driven websites like blogs, marketing, and e-commerce. Astro is best-known for pioneering a new frontend architecture to reduce JavaScript overhead and complexity compared to other frameworks. Itloads fast and has great SEO, then Astro is for you.
+
+I settled for it because :
+Content-driven: Astro was designed to showcase your content.
+Server-first: Websites run faster when they render HTML on the server.
+Fast by default: It should be impossible to build a slow website in Astro.
+Easy to use: You don’t need to be an expert to build something with Astro.
+Developer-focused: 
+
+
+
+React + Tailwindcss + Astro
+
+ 1. Astro-navbar for the navbar was used- https://github.com/surjithctly/astro-navbar
+ 2. Typed.JS - Its a Javascript library that allows you type and deletes. https://github.com/mattboldt/typed.js -
+ I couldnt use typed.js, so i ended up with the help of AI implement css and Js to cretae a similar effect

@@ -1,0 +1,61 @@
+---
+import "@fontsource/poppins";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="container mx-auto">
+    <h2 class="text-2xl font-semibold text-center mb-4">Contact Me</h2>
+
+    <form id="contactForm" class="max-w-lg mx-auto p-6 shadow-lg rounded-lg">
+      <!-- Success/Error Message Box -->
+      <div id="messageBox" class="hidden text-center p-3 rounded-md mb-4"></div>
+
+      <div class="mb-4">
+        <label for="name" class="block text-sm font-medium text-amber-50"
+          >Your Name</label
+        >
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required
+          class="mt-1 p-2 w-full border-amber-50 border-b-2 rounded-md focus:ring focus:ring-indigo-300"
+        />
+      </div>
+
+      <div class="mb-4">
+        <label for="email" class="block text-sm font-medium text-amber-50"
+          >Your Email</label
+        >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          class="mt-1 p-2 w-full border-amber-50 border-b-2 rounded-md focus:ring focus:ring-indigo-300"
+        />
+      </div>
+
+      <div class="mb-4">
+        <label for="message" class="block text-sm font-medium text-amber-50"
+          >Your Message</label
+        >
+        <textarea
+          name="message"
+          id="message"
+          required
+          class="mt-1 p-2 w-full border-amber-50 border-b-2 text-amber-50 rounded-md focus:ring focus:ring-indigo-300"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700"
+        >Send Message</button
+      >
+    </form>
+  </div>
+
+  <script src="/form.js" type="module"></script>
+</Layout>

@@ -1,0 +1,74 @@
+---
+// import { fetchHashnodeBlogs } from "../lib/blog";
+import Layout from "../layouts/Layout.astro";
+
+import "@fontsource/poppins";
+import { getCollection } from "astro:content";
+
+// const posts = await getCollection("blog");
+const posts = (await getCollection("blog")).sort(
+  (a, b) =>
+    new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
+---
+
+<Layout>
+  <!-- <h1>Latest Blog Posts</h1>
+  {
+    posts.length === 0 ? (
+      <p>No blog posts found. Check back later!</p>
+    ) : (
+      <ul>
+        {posts.map((post) => (
+          <li>
+            <a
+              href={`https://ebuntoday.hashnode.dev/${post.slug}`}
+              target="_blank"
+            >
+              <h2>{post.title}</h2>
+            </a>
+            <p>{post.brief}</p>
+            {post.coverImage && (
+              <img src={post.coverImage} alt={post.title} width="300" />
+            )}
+            <p>
+              <small>
+                Published on: {new Date(post.dateAdded).toDateString()}
+              </small>
+            </p>
+          </li>
+        ))}
+      </ul>
+    )
+  } -->
+
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold mb-8 text-center">Blog Archive</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        posts.map((post) => (
+          <a
+            href={post.data.url}
+            target="_blank"
+            href={`/blog/${post.slug}`}
+            class="group block p-4 bg-white rounded-xl shadow hover:shadow-lg transition"
+          >
+            {post.data.image && (
+              <img
+                src={post.data.image}
+                class="rounded-md mb-4 w-full h-48 object-cover"
+              />
+            )}
+            <h2 class="text-xl font-semibold group-hover:underline">
+              {post.data.title}
+            </h2>
+            <p class="text-sm text-gray-500">{post.data.pubDate}</p>
+            <p class="text-gray-700 text-sm line-clamp-3">
+              {post.data.description}
+            </p>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

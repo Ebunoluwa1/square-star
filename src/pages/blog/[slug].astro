@@ -1,0 +1,18 @@
+---
+const { slug } = Astro.params;
+
+const posts = await getCollection("blog");
+const post = posts.find((p) => p.slug === slug);
+if (!post) {
+  throw new Error(`Post not found for slug: ${slug}`);
+}
+
+import { getCollection } from "astro:content";
+---
+
+<article class="max-w-3xl mx-auto py-12 px-4">
+  <h1 class="text-3xl font-bold mb-4">{post.data.title}</h1>
+  <p class="text-sm text-gray-500 mb-6">{post.data.pubDate}</p>
+  <img src={post.data.image} class="mb-6 rounded" />
+  <div class="prose max-w-none" set:html={post.body} />
+</article>
