@@ -1,13 +1,20 @@
 ---
-const { slug } = Astro.params;
+import type { GetStaticPaths } from "astro";
 
-const posts = await getCollection("blog");
-const post = posts.find((p) => p.slug === slug);
-if (!post) {
-  throw new Error(`Post not found for slug: ${slug}`);
+import { AstroError } from "astro/errors";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return [
+    posts.map((post) => ({
+      params: { slug: post.slug },
+      props: { post },
+    })),
+  ];
 }
 
-import { getCollection } from "astro:content";
+const { post } = Astro.props;
 ---
 
 <article class="max-w-3xl mx-auto py-12 px-4">
