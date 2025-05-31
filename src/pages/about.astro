@@ -4,165 +4,109 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <div class="w-full mx-4">
-    <h1 class="text-5xl mx-4">About</h1>
-    <div class="flex flex-row text-center items-start justify-between m-4">
+  <div class="w-full px-4">
+    <h1 class="text-3xl md:text-5xl mt-6 mb-4">About</h1>
+
+    <div class="flex flex-col md:flex-row items-start justify-between gap-6">
       <img
-        height="500"
-        width="500"
-        src="/public/assets/Ebun.jpeg"
-        class="my-2 mx-2 shadow-md drop-shadow-[10px_10px_35px_rgba(39,245,131,0.6)]"
+        src="/assets/Ebun.jpeg"
+        class="w-full md:w-[300px] lg:w-[400px] xl:w-[500px] rounded shadow-md drop-shadow-[10px_10px_35px_rgba(39,245,131,0.6)]"
+        alt="Ebun"
       />
 
-      <!-- right -->
-      <div class="mx-2 text-left">
+      <!-- right content -->
+      <div class="text-left space-y-4">
         <p>
-          Hi there! I am Ebunoluwa, I am a passionate <strong>
-            Frontend developer
-          </strong> dedicated to building high-quality software, crafting seamless
-          and engaging user experiences that solves real-life problems and makes
-          people's lives easier. I like solving problems and bringing ideas to life
-          through code.
-          <br />I enjoy working on projects that blend functionality with great
-          design, such as <strong>JustBeans</strong>, where I independently
-          built a full-fledged business website integrating authentication,
-          payments, and user engagement. My experience working with Supabase,
-          API integrations, and payment gateways like React Paystack has
-          strengthened my ability to create dynamic, real-world applications
-          that make a positive impact on businesses.
-        </p><br />
-        <p>
-          My expertise lies in <strong>frontend development</strong>, with a
-          focus on web applications. I'm proficient in JavaScript and
-          comfortable working with frameworks and tools like <strong
-            >React, Tailwind CSS, and Node.js.</strong
-          >
+          Hi there! I am Ebunoluwa, a passionate <strong
+            >Frontend developer</strong
+          > dedicated to building high-quality software and crafting seamless user
+          experiences that solve real-life problems.
           <br />
-          <p>
-            In addition to my technical skills, I excel at collaborating with
-            team members and communicating effectively. My strengths go beyond
-            technical proficiency—I thrive in team environments, bringing a
-            growth mindset, keen attention to detail, and a drive for excellence
-            to every line of code. Beyond coding, I'm a lifelong learner
-            committed to continuous improvement. Whether it's exploring new
-            frameworks, debugging complex issues, or optimizing performance, I
-            embrace every challenge as an opportunity to grow.
-          </p><br />
-          <p>
-            When I’m not coding, I enjoy writing about my learnings on <strong>
-              <a
-                href="#/https://hashnode.com/@Ebuntoday"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Hashnode
-              </a></strong
-            >
-            sharing insights on problem-solving, development best practices, and
-            self-improvement. I'm excited about opportunities that allow me to build
-            impactful,scalable and dynamic applications, collaborate with like-minded
-            individuals, and continue growing as a developer. I'm always looking
-            for new opportunities to work on exciting projects, so if you're interested
-            in collaborating, please feel free to get in touch. Let’s create something
-            amazing together! 🚀.
-          </p>
+          I love projects that blend functionality with great design, like <strong
+            >JustBeans</strong
+          >, where I independently built a full-fledged business website with
+          authentication, payments, and user engagement. My experience with
+          Supabase, API integrations, and Paystack has helped me build impactful
+          applications.
         </p>
-        <div class="text-left mx-2">
-          <h1 class="text-5xl my-4">MY SKILLS</h1>
-          <div class="grid grid-cols-4 gap-4">
-            <span
-              class="bg-amber-50 p-2 rounded text-slate-900 flex flex-col items-center"
-            >
-              <img
-                src="/assets/tailwind.png"
-                class="rounded"
-                width="100"
-                height="100"
-              />
-              Tailwind Css
-            </span>
 
-            <span
-              class="bg-amber-50 p-2 rounded text-slate-900 flex flex-col items-center"
-            >
-              <img
-                src="/assets/js.jpg"
-                class="rounded"
-                width="100"
-                height="100"
-              />
-              Javascript
-            </span>
+        <p>
+          My core strength is in <strong>frontend development</strong> — I’m skilled
+          in JavaScript, <strong>React, Tailwind CSS, and Node.js</strong>.
+        </p>
 
-            <span
-              class="bg-amber-50 p-2 rounded text-slate-900 flex flex-col items-center"
-            >
-              <img
-                src="/assets/reactjs.png"
-                class="rounded"
-                width="100"
-                height="100"
-              />
-              ReactJS
-            </span>
+        <p>
+          I’m also a great team player who thrives in collaborative
+          environments. I bring a growth mindset, strong communication, and keen
+          attention to detail to every project.
+        </p>
 
-            <span
-              class="bg-amber-50 p-2 rounded text-slate-900 flex flex-col items-center"
+        <p>
+          When I’m not coding, I write about my journey on <strong>
+            <a
+              href="https://hashnode.com/@Ebuntoday"
+              target="_blank"
+              rel="noopener noreferrer">Hashnode</a
             >
-              <img
-                src="/assets/styled.png"
-                class="rounded"
-                width="300"
-                height="300"
-              />
-              Styled Component
-            </span>
-            <span
-              class="bg-amber-50 p-2 rounded text-slate-900 flex flex-col items-center"
+          </strong>, sharing insights on development, self-improvement, and
+          problem-solving. I also <strong>
+            share honest reflections on LinkedIn
+          </strong>—especially around consistency, growth, self-leadership, and
+          purposeful learning as a developer.
+          <br />
+        </p>
+        <p>
+          Outside of coding, I love contributing to purpose-driven projects that
+          require giving back to the community and have volunteered in roles
+          that let me support teams with web development, design feedback, and
+          outreach.
+        </p>
+        <p>
+          I’m open to collaborations that challenge me to grow and deliver real
+          value and lasting impact. Let’s build something impactful together. 🚀
+        </p>
+
+        <div class="">
+          <div class="mt-8">
+            <button
+              id="downloadBtn"
+              class="ring rounded ring-amber-50 my-4 py-2 px-6 hover:bg-slate-500 hover:text-amber-50 hover:"
             >
-              <img
-                src="/assets/nodejs.png"
-                class="rounded"
-                width="100"
-                height="100"
-              />
-              NodeJS
-            </span>
-            <span
-              class="bg-amber-50 p-2 rounded text-slate-900 flex flex-col items-center"
-            >
-              <img
-                src="/assets/git.png"
-                class="rounded"
-                width="400"
-                height="400"
-              />
-              Git
-            </span>
-            <span
-              class="bg-amber-50 p-2 rounded text-slate-900 flex flex-col items-center"
-            >
-              <img
-                src="/assets/ts.png"
-                class="rounded"
-                width="400"
-                height="400"
-              />
-              TypeScript
-            </span>
-            <span
-              class="bg-amber-50 p-2 rounded text-slate-900 flex flex-col items-center"
-            >
-              <img
-                src="/assets/sass.png"
-                class="rounded"
-                width="400"
-                height="400"
-              />
-              Sass
-            </span>
+              Download CV
+            </button>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Skills Section -->
+    <div class="mt-12">
+      <h2 class="text-3xl md:text-5xl mb-4">My Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        {
+          [
+            { label: "Tailwind CSS", src: "/assets/tailwind.png" },
+            { label: "JavaScript", src: "/assets/js.jpg" },
+            { label: "ReactJS", src: "/assets/reactjs.png" },
+            { label: "Styled Component", src: "/assets/styled.png" },
+            { label: "NodeJS", src: "/assets/nodejs.png" },
+            { label: "Git", src: "/assets/git.png" },
+            { label: "TypeScript", src: "/assets/ts.png" },
+            { label: "Sass", src: "/assets/sass.png" },
+          ].map((skill) => (
+            <span class="bg-amber-50 p-3 rounded text-slate-900 flex flex-col items-center text-center">
+              <img
+                src={skill.src}
+                alt={skill.label}
+                class="w-20 h-20 object-contain mb-2"
+              />
+              {skill.label}
+            </span>
+          ))
+        }
+      </div>
+    </div>
   </div>
+
+  <script src="/script.js" type="module"></script>
 </Layout>
